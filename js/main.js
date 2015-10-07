@@ -50,8 +50,8 @@ function getWorldCoordinates(callback,flag){
 	worldCoordinates = [];
 	for(width_index = 0; width_index < windowDims[0]; width_index++){
 		for(height_index = 0; height_index < windowDims[1]; height_index++){
-			var tempX = -1 + (width_index/128);
-			var tempY = 1 - (height_index/128);
+			var tempX = -1 + (width_index/(windowDims[0]/2));
+			var tempY = 1 - (height_index/(windowDims[1]/2));
 			worldCoordinates.push([tempX,tempY,-1]);
 		}
 	}
